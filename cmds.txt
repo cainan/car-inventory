@@ -1,0 +1,3 @@
+docker login
+docker image build -t car-inventory:v1 .
+docker run -d --name car-inventory-api -p 8090:8090  car-inventory:v1
