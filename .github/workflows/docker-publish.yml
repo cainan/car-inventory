@@ -37,6 +37,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      ## build using maven
+      - name: Run mvn clean
+        run: mvn clean
+
+      - name: Run mvn package
+        run: mvn package
+
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
